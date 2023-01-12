@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 90px;
+    display: flex;
+    background-color: rgb(27, 27, 77);
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 35px;
+}
+
+.header-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+    height: 90px;
+    padding: 20px;
+    background-color: #16906b;
+}
+
+.logo img{
+    width: 100%;
+}
+
+nav{
+    margin-left: 25px;
+    height: 90px;
+    line-height: 90px;
+}
+
+nav ul{
+    list-style:  none;
+}
+   
+nav ul li{
+    display: inline-block;
+    margin-left: 35px;
+    font-size: 14px;
+    font-weight: 700px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    position: relative;
+    display: block;
+}
+
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #16906b;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: #16906b;
+}
+
+ nav ul li a:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search{
+    width: 212px;
+    height: 30px;
+    border: 1px solid gray;
+    margin-right: 75px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.search input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+}
+
+.search input::placeholder{
+    color: lightslategray;
+    font-weight: 600px;
+}
+
+.search i{
+    color: white;
+}
+
+.cart,
+.user{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid lightslategray;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 8px;
+    position: relative;
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cart::before{
+    content: '0';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: -4;
+    right: -4px;
+    color: white;
+    font-size: 14px;
+    background: #16906b;
+    text-align: center;
+    line-height: 15px;
+    visibility: visible;
+}
+
+.cart:hover,
+.user:hover{
+    background: #16906b;
+    border: 1px solid #16906b;
+}
+
+.cart i,
+.user i{
+    color: white;
+    font-size:14px ;
+}
+
+.sidebar{
+    margin-left: 20px;
+}
+
+.sidebar i{
+    color: white;
+    font-size: 23px;
+}
+
